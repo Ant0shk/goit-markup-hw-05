@@ -120,11 +120,12 @@ body {
   padding: 24px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* .current {
+
+.activ {
   position: relative;
   color: #404bbf;
 }
-.current::after {
+.activ::after {
   content: "";
   position: absolute;
   left: 0;
@@ -132,7 +133,7 @@ body {
   height: 4px;
   background-color: #404bbf;
   border-radius: 2px;
-} */
+}
 .contact-link {
   font-weight: 400;
   font-size: 16px;
@@ -293,6 +294,7 @@ body {
   justify-content: center;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-link:hover,
 .social-list-link:focus {
@@ -332,6 +334,7 @@ body {
   color: #8e8f99;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .customers-link:hover,
 .customers-link:focus {
@@ -373,7 +376,6 @@ body {
   display: inline-block;
   margin-bottom: 16px;
 }
-/* Кнопки портфолио */
 .footer-container {
   display: flex;
   align-items: baseline;
@@ -409,12 +411,14 @@ body {
   justify-content: center;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .cocial-media-link-footer:hover,
 .cocial-media-link-footer:focus {
   background-color: #31d0aa;
   background-color: #31d0aa;
 }
+/* Портфолио */
 .list-button-properties {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -466,15 +470,14 @@ body {
 .link-element-gallery:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    transform: translateY(0);
 }
 .element-gallery:hover .curtains {
   transform: translateY(0);
 }
-.element-gallery:focus{
+/* .element-gallery:focus{
 transform: translateY(0);
-}
+} */
 .curtains-wrap {
   position: relative;
   overflow: hidden;
@@ -534,15 +537,15 @@ transform: translateY(0);
 
 .modal {
   min-height: 576px;
+  width: 408px;
   background: #fcfcfc; 
-  padding: 30px;
-  background-color: var(--white-color);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px; 
 }
 
 .backdrop.is-hidden .modal {
